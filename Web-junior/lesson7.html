@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        nav {
+            overflow: hidden;
+            background-color: #333;
+        }
+        nav a{
+            float: left;
+            font-size: 16px;
+            color: white;
+            padding: 14px 16px;
+            text-decoration: none;
+            text-align: center;
+        }
+        .dropdown{
+            float: left;
+            overflow: hidden;
+        }
+        .dropbtn{
+            background-color: aqua;
+            font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+        }
+        nav a:hover ,.dropdown:hover .dropbtn{
+            background-color: red;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            max-width: 160px;
+            background-color: #f9f9f9;
+            z-index: 1;
+        }
+        .dropdown-content a{
+            float: none;
+            color: #000;
+            display: block;
+            padding: 12px 16px;
+            text-decoration: none;
+            text-align: center;
+        }
+        .dropdown-content a:hover {
+  background-color: #ddd;
+}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">News</a>
+        <div class="dropdown">
+            <button class="dropbtn" href ="">
+                Dropdown
+            </button>
+            <div class="dropdown-content">
+                <a href="#">link</a>
+                <a href="#">link</a>
+                <a href="#">link</a>
+            </div>
+        </div>
+        
+    </nav>
+</body>
+</html>
