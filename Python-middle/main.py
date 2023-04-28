@@ -1,26 +1,19 @@
-import os
-
-# print(os.name)
-# print(os.getcwd())
+import random
 #
-# os.chdir("C:\\")
-# print(os.getcwd())
-# os.mkdir("It works")
-# os.mkdir(os.path.join(path,"1"))
-#
-# path = os.path.normpath("C:\\Users\\Redmi\\Desktop\\dir\\1")
-# os.chdir(path)
-# print(os.getcwd())
-# with open("Text.txt", "r") as file:
-#     # file.write("Привет ,что то там ,но это работает")
-#     a = file.read()
-#     print(a)
+# num = 3.4934380482
+# print(f"{num:0.6f}")
 
-print(os.getcwd())
-path = os.path.normpath("C:\\Users\Redmi\Documents\Programming\StepExercises")
-for path1,dirname,file, in os.walk(path):
-        print("{:*^20}".format("Path"))
-        print(f"\t{path1}")
-        print("{:#^40}".format("Files"))
-        print(f"\t\t{file}")
 
+# name = "Олег"
+# age = 15
+# a = f"Привет{name:->15s}\nТвой возраст\t{age:->6n}"
+# print(a)
+
+# array = list(range(0,10))
+# print("Cодержимое массива:")
+# for i in array:
+#     print(f"число{i:^10} массива")
+# name = "Андрей"
+# age =2
+# a = "Привет {0:*^10} твой возраст {1}".format(name,age)
+# print(a)
