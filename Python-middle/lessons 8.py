@@ -1,16 +1,29 @@
-from abc import ABC, abstractmethod
+import tkinter as tk
+from tkinter import filedialog
 
-class Piece(ABC):
-    @abstractmethod
-    def move(self):
-        pass
+# def clicked():
+#     lbl.configure(text="Foggot")
 
-class Queen (Piece):
-    def move(self):
-        print('Ход ферзя')
+def clicked():
+    entryText = f"hi {txt.get()}"
+    lbl.configure(text = entryText)
 
-a = Piece()
-b = Queen()
 
-a.move()
-b.move()
+# Create simple window
+window = tk.Tk()
+window.title('Test')
+
+
+window.geometry('400x250')
+
+lbl = tk.Label(window,text='Hello',font = ("Arial",50))
+lbl.grid(column= 0, row= 0)
+
+btn = tk.Button(window,text='Не нажимать',bg="black", fg="red" , command=clicked)
+btn.grid(column=0, row= 2)
+
+txt = tk.Entry(window)
+txt.grid(column=0, row=1)
+
+
+window.mainloop()
