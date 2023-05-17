@@ -1,20 +1,20 @@
-import tkinter as tk
-from turtle import color
+import numba as nb
 
-count = 0
-def clicked():
-    global count
-    count += 1
-    lbl.configure(text = f'{count} ')
 
-window = tk.Tk()
-window.title('Test')
-window.geometry('400x250')
+@nb.njit
+def fastPow(a: nb.types.longlong, b: nb.types.longlong) -> nb.types.longlong:
+    acc = 1
+    res = a
 
-lbl = tk.Label(window, text='Hello, world', font=('Arial', 50))
-lbl.grid(column=0, row=0)
+    while b > 0:
 
-btn = tk.Button(window, text='Click', command=clicked, bg="red", fg="white")
-btn.grid(column=0, row=1)
+        if b & 1:
+            acc *= res
+        res *= res
+        b >>= 1
 
-window.mainloop()
+    return acc
+
+
+for i in range(1, 13):
+    print(fastPow(2, 10 * i))
