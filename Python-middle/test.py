@@ -1,20 +1,21 @@
-import numba as nb
+import turtle
 
+# Инициализация экрана и черепахи
+screen = turtle.Screen()
+t = turtle.Turtle()
 
-@nb.njit
-def fastPow(a: nb.types.longlong, b: nb.types.longlong) -> nb.types.longlong:
-    acc = 1
-    res = a
+# Рисуем круг
+t.circle(50)
 
-    while b > 0:
+# Рисуем треугольник
+for i in range(3):
+    t.forward(100)
+    t.left(120)
 
-        if b & 1:
-            acc *= res
-        res *= res
-        b >>= 1
+# Рисуем квадрат
+for i in range(4):
+    t.forward(100)
+    t.left(90)
 
-    return acc
-
-
-for i in range(1, 13):
-    print(fastPow(2, 10 * i))
+# Завершение программы
+turtle.done()
